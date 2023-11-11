@@ -3,7 +3,8 @@ package AnnaStudio.composicao;
 public class TelContato {
 	private String ddd;
     private String numero;
-	public String getDdd() {
+	
+    public String getDdd() {
 		return ddd;
 	}
 	public void setDdd(String ddd) {

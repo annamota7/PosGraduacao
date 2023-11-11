@@ -1,10 +1,12 @@
 package AnnaStudio.pessoas;
 
+import AnnaStudio.composicao.Profissoes;
+
 public class Cliente extends Pessoa {
 	private int codigo;
-	private String profissao;
+	private Profissoes profissao;
 	
-	public void cadastrar(int codigo,String profissao,String nome,String dataNascimento,String endereco,String telsContato) {
+	public void cadastrar(int codigo,Profissoes profissao,String nome,String dataNascimento,String endereco,String telsContato) {
 		this.codigo = codigo;
 		this.profissao = profissao;
 		setDataNascimento(dataNascimento);
@@ -20,11 +22,14 @@ public class Cliente extends Pessoa {
 	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
-	public String getProfissao() {
+
+	public Profissoes getProfissao() {
 		return profissao;
 	}
-	public void setProfissao(String profissao) {
+
+	public void setProfissao(Profissoes profissao) {
 		this.profissao = profissao;
 	}
+	
 
 }

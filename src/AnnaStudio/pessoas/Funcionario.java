@@ -1,14 +1,16 @@
 package AnnaStudio.pessoas;
 
+import AnnaStudio.composicao.Cargos;
+
 public class Funcionario extends Pessoa {
 	private int matricula;
-	private String Cargo;
+	private Cargos cargo;
 	private double salario;
 	private String dataAdmissao;
 	
-	public void cadastrar(int matricula,String Cargo,double salario,String dataAdmissao,String nome,String dataNascimento,String endereco,String telsContato) {
+	public void cadastrar(int matricula,Cargos cargo,double salario,String dataAdmissao,String nome,String dataNascimento,String endereco,String telsContato) {
 		this.matricula = matricula;
-		this.Cargo = Cargo;
+		this.setCargo(cargo);
 		this.salario = salario;
 		this.dataAdmissao = dataAdmissao;
 		setDataNascimento(dataNascimento);
@@ -22,8 +24,8 @@ public class Funcionario extends Pessoa {
 		this.salario = this.salario * percentual;
 	}
 	
-	public void promover (String novoCargo) {
-		this.Cargo = novoCargo;
+	public void promover (Cargos novoCargo) {
+		this.setCargo(novoCargo);
 	}
 	
 	
@@ -44,12 +46,17 @@ public class Funcionario extends Pessoa {
 		this.dataAdmissao = dataAdmissao;
 	}
 
-	public String getCargo() {
-		return Cargo;
-	}
 
 	public double getSalario() {
 		return salario;
+	}
+
+	public Cargos getCargo() {
+		return cargo;
+	}
+
+	public void setCargo(Cargos cargo) {
+		this.cargo = cargo;
 	}
 	
 	
